@@ -1,0 +1,16 @@
+[user]
+    name = hongliang
+    email = hongliang5316@gmail.com
+[alias]
+    st = status
+    ci = commit -v
+    ck = checkout
+    co = clone
+    df = diff
+    pl = pull
+    ph = push
+    br = branch
+    mg = merge
+    lg = log --stat
+[diff]
+    algorithm = patience
