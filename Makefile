@@ -1,4 +1,4 @@
-VIM_RUNTIME=/root/.vim
+VIM_RUNTIME=~/.vim
 
 .PHONY: all test install
 
@@ -12,5 +12,5 @@ install: all
 	cp -r record $(VIM_RUNTIME)/
 	cp -r syntax $(VIM_RUNTIME)/
 	cp -r tools $(VIM_RUNTIME)/
-	cp -r .vimrc $(VIM_RUNTIME)/
-	cp -r .screenrc $(VIM_RUNTIME)/
+	cp -r .vimrc ~/
+	cp -r .screenrc ~/
