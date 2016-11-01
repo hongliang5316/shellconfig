@@ -6,11 +6,11 @@
     ci = commit -v
     ck = checkout
     co = clone
-    df = diff
+    df = diff --color
     pl = pull
     ph = push
     br = branch
     mg = merge
-    lg = log --stat
+    lg = log --stat --color
 [diff]
     algorithm = patience
