@@ -407,4 +407,4 @@ hi TabLineSel  ctermbg=red ctermfg=white
 
 let g:table_mode_corner="|"
 set foldlevelstart=99
-autocmd BufWritePost *.c :TlistUpdate
+autocmd BufWritePost * :TlistUpdate
