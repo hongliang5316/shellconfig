@@ -408,3 +408,5 @@ hi TabLineSel  ctermbg=red ctermfg=white
 let g:table_mode_corner="|"
 set foldlevelstart=99
 autocmd BufWritePost * :TlistUpdate
+let g:ctrlp_map = '<c-m>'
+let g:ctrlp_cmd = 'CtrlP'
