@@ -12,6 +12,7 @@ alias mk='make'
 alias v='vim'
 alias mkt='make test'
 alias mkb='make build'
+alias grep='grep --color'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
