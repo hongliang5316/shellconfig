@@ -410,3 +410,6 @@ set foldlevelstart=99
 autocmd BufWritePost * :TlistUpdate
 let g:ctrlp_map = '<c-m>'
 let g:ctrlp_cmd = 'CtrlP'
+" open ctag in tab/vertical split
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <leader><C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
