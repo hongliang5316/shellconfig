@@ -176,10 +176,10 @@ nm      <c-n>   gt
 nm      <c-p>   gT
 
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+map gj <C-W>j
+map gk <C-W>k
+map gh <C-W>h
+map gl <C-W>l
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
