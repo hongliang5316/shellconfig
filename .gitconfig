@@ -12,5 +12,6 @@
     br = branch
     mg = merge
     lg = log --stat --color
+    sh = show --color
 [diff]
     algorithm = patience

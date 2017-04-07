@@ -5,6 +5,9 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+nnoremap k gk
+nnoremap j gj
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
