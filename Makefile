@@ -9,3 +9,4 @@ install: all
 	cp -r .screenrc ~/
 	cp -r .gitconfig ~/
 	cp -r .bashrc ~/
+	cp -r .gdbinit ~/
