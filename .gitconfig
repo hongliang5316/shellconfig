@@ -13,5 +13,6 @@
     mg = merge
     lg = log --stat --color
     sh = show --color
+    sa = stash
 [diff]
     algorithm = patience
