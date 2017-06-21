@@ -397,7 +397,7 @@ nm <silent> ==   {=}''
 colorscheme solarized
 
 "nginx syntax highlight
-"source ~/.vim/syntax/nginx.vim
+source ~/.vim/syntax/nginx.vim
 
 highlight WhiteSpaceEOL ctermbg=darkgreen guibg=lightgreen
 match WhiteSpaceEOL /\s*\ \s*$/

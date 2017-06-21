@@ -10,3 +10,4 @@ install: all
 	cp -r .gitconfig ~/
 	cp -r .bashrc ~/
 	cp -r .gdbinit ~/
+	cp -r .tmux.conf ~/
