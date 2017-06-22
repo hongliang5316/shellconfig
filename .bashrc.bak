@@ -1,0 +1,57 @@
+# .bashrc
+
+# User specific aliases and functions
+
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+    export TERM='xterm-256color'
+else
+    export TERM='xterm-color'
+fi
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ls='ls --color=auto'
+alias ll='ls -al'
+alias g='git'
+alias mk='make'
+alias v='vim'
+alias mkt='make test'
+alias mkb='make build'
+alias grep='grep --color'
+alias ports='netstat -tulanp'
+## pass options to free ##
+alias meminfo='free -m -l -t'
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+## Get server cpu info ##
+alias cpuinfo='lscpu'
+## older system use /proc/cpuinfo
+##alias cpuinfo='less /proc/cpuinfo'
+#### get GPU ram on desktop / laptop##
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+export VISUAL='vim'
+
+PATH=$PATH:$HOME/bin
+
+export PATH=/opt/edge2api:$PATH
+
+export PATH=/opt/edgelang/bin:$PATH
+export PATH=/opt/sregex:$PATH
+export PATH=/opt/stapxx:$PATH
+export PATH=/opt/lemplate:$PATH
+export PATH=/opt/openresty-devel-utils:$PATH
+export LC_ALL=en_US.UTF-8
+
+# added by travis gem
+[ -f /root/.travis/travis.sh ] && source /root/.travis/travis.sh
