@@ -1,9 +1,10 @@
 [user]
     name = hongliang
-    email = hongliang5316@gmail.com
+    email = 513918845@qq.com
+	signingkey = 0DBFF7F9FD3ADB62
 [alias]
     st = status
-    ci = commit -v
+    ci = commit -avS
     ck = checkout
     co = clone
     df = diff --color
@@ -14,5 +15,11 @@
     lg = log --stat --color
     sh = show --color
     sa = stash
+    phm = push origin master
+    plm = pull origin master
+    rebase = rebase --exec 'git commit --amend --no-edit -n -S'
+    cis = commit --amend --no-edit -n -S
 [diff]
     algorithm = patience
+[commit]
+	gpgsign = true

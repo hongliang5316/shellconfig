@@ -23,3 +23,4 @@ export VISUAL='vim'
 
 PATH=$PATH:$HOME/bin
 
+export GPG_TTY=$(tty)

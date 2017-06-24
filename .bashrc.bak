@@ -52,6 +52,4 @@ export PATH=/opt/stapxx:$PATH
 export PATH=/opt/lemplate:$PATH
 export PATH=/opt/openresty-devel-utils:$PATH
 export LC_ALL=en_US.UTF-8
-
-# added by travis gem
-[ -f /root/.travis/travis.sh ] && source /root/.travis/travis.sh
+export GPG_TTY=$(tty)
