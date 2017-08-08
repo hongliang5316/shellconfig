@@ -13,6 +13,4 @@ RUN curl -SL https://github.com/hongliang5316/shellconfig/archive/v1.1.tar.gz -o
 
 ENV TERM=xterm-256color
 
-WORKDIR /opt
-
 CMD ["vim"]
