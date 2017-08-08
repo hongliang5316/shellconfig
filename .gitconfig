@@ -4,7 +4,7 @@
 	signingkey = 0DBFF7F9FD3ADB62
 [alias]
     st = status
-    ci = commit -avS
+    ci = commit -avS --signoff
     ck = checkout
     co = clone
     df = diff --color
@@ -18,7 +18,7 @@
     phm = push origin master
     plm = pull origin master
     rebase = rebase --exec 'git commit --amend --no-edit -n -S'
-    cis = commit --amend --no-edit -n -S
+    cis = commit --amend --no-edit -n -S --signoff
 [diff]
     algorithm = patience
 [commit]
