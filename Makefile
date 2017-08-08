@@ -1,5 +1,5 @@
 
-.PHONY: all test install
+.PHONY: all test install docker-build
 
 all: ;
 
@@ -24,3 +24,6 @@ zsh-install:
 	cp -r .zshrc ~/
 	cp -r agnoster.zsh-theme.modify ~/.oh-my-zsh/themes/agnoster.zsh-theme
 	echo 'set-option -g default-shell /bin/zsh' >> ~/.tmux.conf
+
+docker-build:
+	docker build -t docker-env .
