@@ -423,3 +423,11 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <leader><C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 set updatetime=250
+
+function TabToggle()
+  if &expandtab
+    set shiftwidth=8
+    set softtabstop=0
+    set noexpandtab
+  endif
+endfunction
