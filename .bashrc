@@ -26,3 +26,6 @@ export TERM='xterm-256color'
 PATH=$PATH:$HOME/bin
 
 export GPG_TTY=$(tty)
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export GPG_TTY=$(tty)
