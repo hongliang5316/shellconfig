@@ -1,6 +1,6 @@
 # shellconfig
 
-include item2 vim and screen config
+include item2 vim git tmux config
 
 NOTE: This is only for Centos
 
