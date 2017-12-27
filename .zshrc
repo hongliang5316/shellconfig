@@ -118,17 +118,16 @@ export VISUAL='vim'
 
 PATH=$PATH:$HOME/bin
 
-export PATH=/opt/edge2api:$PATH
-
-export PATH=/opt/edgelang/bin:$PATH
-export PATH=/opt/sregex:$PATH
-export PATH=/opt/stapxx:$PATH
-export PATH=/opt/lemplate:$PATH
-export PATH=/opt/openresty-devel-utils:$PATH
-export PATH=/opt/stap/bin:$PATH
-export PATH=/opt/openresty-systemtap-toolkit:$PATH
-export PATH=/usr/local/php/bin:$PATH
-export PATH=/root/.config/composer/vendor/bin:$PATH
+#export PATH=/opt/edge2api:$PATH
+#export PATH=/opt/edgelang/bin:$PATH
+#export PATH=/opt/sregex:$PATH
+#export PATH=/opt/stapxx:$PATH
+#export PATH=/opt/lemplate:$PATH
+#export PATH=/opt/openresty-devel-utils:$PATH
+#export PATH=/opt/stap/bin:$PATH
+#export PATH=/opt/openresty-systemtap-toolkit:$PATH
+#export PATH=/usr/local/php/bin:$PATH
+#export PATH=/root/.config/composer/vendor/bin:$PATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
@@ -137,7 +136,7 @@ export GPG_TTY=$(tty)
 [ -f /root/.travis/travis.sh ] && source /root/.travis/travis.sh
 
 #set dircolors
-eval `dircolors /opt/dircolors-solarized/dircolors.ansi-dark`
+eval `dircolors ~/git/dircolors-solarized/dircolors.ansi-dark`
 
-export PATH="$HOME/.plenv/bin:$PATH"
-eval "$(plenv init - zsh)"
+#export PATH="$HOME/.plenv/bin:$PATH"
+#eval "$(plenv init - zsh)"
