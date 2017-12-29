@@ -6,4 +6,4 @@ NOTE: This is only for Centos
 
 VIM version: v8.0+
 
-TMUX version: v1.8
+TMUX version: v2.6
