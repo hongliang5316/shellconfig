@@ -100,6 +100,7 @@ alias mkt='make test'
 alias mkb='make build'
 alias grep='grep --color'
 alias ports='netstat -tulanp'
+alias pp='python -mjson.tool'
 ## pass options to free ##
 alias meminfo='free -m -l -t'
 ## get top process eating memory

@@ -100,6 +100,7 @@ alias mkt='make test'
 alias mkb='make build'
 alias grep='grep --color'
 alias ports='netstat -tulanp'
+alias pp='python -mjson.tool'
 #alias luac='/usr/local/bin/luac-5.1'
 alias awk='gawk'
 ## pass options to free ##
