@@ -2,7 +2,7 @@
 
 include item2 vim git tmux config
 
-NOTE: This is only for Centos
+NOTE: This is only for Centos & MacOS
 
 VIM version: v8.0+
 
