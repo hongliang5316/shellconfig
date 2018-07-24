@@ -139,5 +139,7 @@ export GPG_TTY=$(tty)
 #set dircolors
 eval `dircolors ~/git/dircolors-solarized/dircolors.ansi-dark`
 
+setopt +o nomatch
+
 #export PATH="$HOME/.plenv/bin:$PATH"
 #eval "$(plenv init - zsh)"
