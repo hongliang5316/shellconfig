@@ -29,4 +29,4 @@ export GPG_TTY=$(tty)
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-eval `dircolors /opt/dircolors-solarized/dircolors.ansi-dark`
+eval `dircolors ~/git/dircolors-solarized/dircolors.ansi-dark`
