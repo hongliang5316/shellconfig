@@ -11,6 +11,7 @@ install: all
 	cp -r .bashrc ~/
 	cp -r .gdbinit ~/
 	cp -r .tmux.conf ~/
+	cp -r .myclirc ~/
 
 zsh-install:
 	echo 'You should install zsh & oh-my-zsh'
@@ -21,6 +22,7 @@ zsh-install:
 	cp -r .bashrc ~/
 	cp -r .gdbinit ~/
 	cp -r .tmux.conf ~/
+	cp -r .myclirc ~/
 	cp -r .zshrc ~/
 	cp -r agnoster.zsh-theme.modify ~/.oh-my-zsh/themes/agnoster.zsh-theme
 
