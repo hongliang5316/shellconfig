@@ -118,6 +118,7 @@ set foldcolumn=1
 syntax enable
 
 set background=dark
+let g:solarized_termtrans=1
 
 " Set extra options when running in GUI mode
 if has("gui_running")
