@@ -19,7 +19,16 @@
     plm = pull origin master
     rebase = rebase --exec 'git commit --amend --no-edit -n -S'
     cis = commit --amend --no-edit -n -S --signoff
+	d = difftool
 [diff]
     algorithm = patience
+	tool = vimdiff
 [commit]
 	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool]
+	prompt = false
