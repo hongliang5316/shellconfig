@@ -445,3 +445,5 @@ function! StrPadLeft(s, w)
     let s = substitute(a:s, '^\s\+\|\s\+$', '', 'g')
     return repeat(' ', a:w - strwidth(s)) . s
 endfunction
+
+hi Normal guibg=NONE ctermbg=NONE
