@@ -448,8 +448,6 @@ endfunction
 
 hi Normal guibg=NONE ctermbg=NONE
 
-autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
-autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 let g:rustfmt_autosave = 1
 let g:racer_cmd = "/root/.cargo/bin/racer"
