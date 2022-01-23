@@ -137,7 +137,7 @@ export GPG_TTY=$(tty)
 [ -f /root/.travis/travis.sh ] && source /root/.travis/travis.sh
 
 #set dircolors
-eval `dircolors ~/git/dircolors-solarized/dircolors.ansi-dark`
+eval `dircolors ~/dircolors-solarized/dircolors.ansi-dark`
 
 setopt +o nomatch
 
