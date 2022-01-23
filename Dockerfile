@@ -63,13 +63,13 @@ RUN git clone https://github.com/seebi/dircolors-solarized.git \
     && mv dircolors-solarized /root/
 
 # install shellconfig
-RUN wget https://github.com/hongliang5316/shellconfig/archive/refs/tags/v1.4.tar.gz \
-    && tar zxvf v1.4.tar.gz \
-    && cd shellconfig-1.4 \
+RUN wget https://github.com/hongliang5316/shellconfig/archive/refs/tags/v1.5.tar.gz \
+    && tar zxvf v1.5.tar.gz \
+    && cd shellconfig-1.5 \
     && make zsh-install \
     && cp -R .gnupg /root/ \
     && cd .. \
-    && rm -rf v1.4.tar.gz shellconfig-1.4
+    && rm -rf v1.5.tar.gz shellconfig-1.5
 
 # install golang
 RUN wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz \
@@ -82,3 +82,28 @@ RUN curl https://sh.rustup.rs -o cargo-install.sh \
     && chmod +x cargo-install.sh \
     && ./cargo-install.sh -y \
     && rm -rf cargo-install.sh
+
+# install vim-go
+RUN git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go \
+    && go install github.com/klauspost/asmfmt/cmd/asmfmt@latest \
+    && go install github.com/go-delve/delve/cmd/dlv@latest \
+    && go install github.com/kisielk/errcheck@latest \
+    && go install github.com/davidrjenni/reftools/cmd/fillstruct@master \
+    && go install github.com/rogpeppe/godef@latest \
+    && go install golang.org/x/tools/cmd/goimports@master \
+    && go install golang.org/x/lint/golint@master \
+    && go install github.com/mgechev/revive@latest \
+    && go install golang.org/x/tools/gopls@latest \
+    && go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest \
+    && go install honnef.co/go/tools/cmd/staticcheck@latest \
+    && go install github.com/fatih/gomodifytags@latest \
+    && go install golang.org/x/tools/cmd/gorename@master \
+    && go install github.com/jstemmer/gotags@master \
+    && go install golang.org/x/tools/cmd/guru@master \
+    && go install github.com/josharian/impl@master \
+    && go install honnef.co/go/tools/cmd/keyify@master \
+    && go install github.com/fatih/motion@latest \
+    && go install github.com/koron/iferr@master
+
+# install rust.vim
+RUN git clone https://github.com/rust-lang/rust.vim ~/.vim/pack/plugins/start/rust.vim
