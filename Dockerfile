@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum install wget make automake gcc openssl-devel curl-devel expat-devel gettext ncurses-devel libevent-devel zsh which sudo -y
+RUN yum install wget make automake gcc openssl-devel curl-devel expat-devel gettext ncurses-devel libevent-devel zsh which sudo openssh-clients -y
 
 ENV PATH="/usr/local/go/bin:/root/.cargo/bin:/root/bin:${PATH}"
 ENV SHELL="/usr/bin/zsh"
@@ -67,6 +67,7 @@ RUN wget https://github.com/hongliang5316/shellconfig/archive/refs/tags/v1.4.tar
     && tar zxvf v1.4.tar.gz \
     && cd shellconfig-1.4 \
     && make zsh-install \
+    && cp -R .gnupg /root/ \
     && cd .. \
     && rm -rf v1.4.tar.gz shellconfig-1.4
 
