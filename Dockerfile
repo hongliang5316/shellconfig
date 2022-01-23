@@ -2,7 +2,7 @@ FROM centos:7
 
 RUN yum install wget make automake gcc openssl-devel curl-devel expat-devel gettext ncurses-devel libevent-devel zsh which sudo -y
 
-ENV PATH="/root/bin:${PATH}"
+ENV PATH="/usr/local/go/bin:/root/.cargo/bin:/root/bin:${PATH}"
 ENV SHELL="/usr/bin/zsh"
 
 WORKDIR /opt
@@ -69,3 +69,15 @@ RUN wget https://github.com/hongliang5316/shellconfig/archive/refs/tags/v1.4.tar
     && make zsh-install \
     && cd .. \
     && rm -rf v1.4.tar.gz shellconfig-1.4
+
+# install golang
+RUN wget https://go.dev/dl/go1.16.13.linux-amd64.tar.gz \
+    && tar zxvf go1.16.13.linux-amd64.tar.gz \
+    && mv go /usr/local/ \
+    && rm -rf go1.16.13.linux-amd64.tar.gz
+
+# install cargo
+RUN curl https://sh.rustup.rs -o cargo-install.sh \
+    && chmod +x cargo-install.sh \
+    && ./cargo-install.sh -y \
+    && rm -rf cargo-install.sh
