@@ -72,10 +72,10 @@ RUN wget https://github.com/hongliang5316/shellconfig/archive/refs/tags/v1.4.tar
     && rm -rf v1.4.tar.gz shellconfig-1.4
 
 # install golang
-RUN wget https://go.dev/dl/go1.16.13.linux-amd64.tar.gz \
-    && tar zxvf go1.16.13.linux-amd64.tar.gz \
+RUN wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz \
+    && tar zxvf go1.17.6.linux-amd64.tar.gz \
     && mv go /usr/local/ \
-    && rm -rf go1.16.13.linux-amd64.tar.gz
+    && rm -rf go1.17.6.linux-amd64.tar.gz
 
 # install cargo
 RUN curl https://sh.rustup.rs -o cargo-install.sh \
