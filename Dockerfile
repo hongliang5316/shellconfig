@@ -1,9 +1,11 @@
 FROM centos:7
 
-RUN yum install wget make automake gcc openssl-devel curl-devel expat-devel gettext ncurses-devel libevent-devel zsh which sudo openssh-clients -y
+RUN yum install wget make automake gcc openssl-devel curl-devel expat-devel gettext ncurses-devel libevent-devel zsh which sudo openssh-clients python3 -y
 
 ENV PATH="/usr/local/go/bin:/root/.cargo/bin:/root/bin:${PATH}"
 ENV SHELL="/usr/bin/zsh"
+
+RUN rm -rf /etc/localtime && ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 WORKDIR /opt
 
