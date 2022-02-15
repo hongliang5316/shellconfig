@@ -109,3 +109,17 @@ RUN git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-
 
 # install rust.vim
 RUN git clone https://github.com/rust-lang/rust.vim ~/.vim/pack/plugins/start/rust.vim
+
+# install coc.nvim
+RUN git clone https://github.com/neoclide/coc.nvim.git ~/.vim/pack/plugins/start/coc.nvim
+
+# install node & yarn
+RUN curl -sL install-node.now.sh | bash -s -- -y \
+    && curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+
+RUN cd ~/.vim/pack/plugins/start/coc.nvim \
+    && /root/.yarn/bin/yarn install
+
+RUN mkdir -p ~/.config/coc/extensions \
+    && cd ~/.config/coc/extensions \
+    && npm install coc-go coc-python --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
