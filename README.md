@@ -2,7 +2,7 @@
 
 docker pull hongliang5316/my-work-env:v1.0.2
 
-# shellconfig
+# Environment
 
 include item2 vim git tmux config
 
