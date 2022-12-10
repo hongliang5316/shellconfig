@@ -40,15 +40,15 @@ RUN wget https://github.com/vim/vim/archive/refs/tags/v8.2.4186.tar.gz \
     && rm -rf v8.2.4186.tar.gz vim-8.2.4186
 
 # install tmux
-RUN wget https://github.com/tmux/tmux/archive/refs/tags/2.7.tar.gz \
-    && tar zxvf 2.7.tar.gz \
-    && cd tmux-2.7 \
+RUN wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz \
+    && tar zxvf tmux-3.3a.tar.gz \
+    && cd tmux-3.3a \
     && ./autogen.sh \
     && ./configure \
     && make -j8 \
     && make install \
     && cd .. \
-    && rm -rf 2.7.tar.gz tmux-2.7
+    && rm -rf tmux-3.3a.tar.gz tmux-3.3a
 
 # install oh-my-zsh
 RUN chsh -s $(which zsh) \
