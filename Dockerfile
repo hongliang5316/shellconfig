@@ -64,6 +64,9 @@ RUN git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUS
 RUN git clone https://github.com/seebi/dircolors-solarized.git \
     && mv dircolors-solarized /root/
 
+# install solarized8
+git clone https://github.com/lifepillar/vim-solarized8.git ~/.vim/pack/themes/opt/solarized8
+
 # install shellconfig
 RUN wget https://github.com/hongliang5316/shellconfig/archive/refs/tags/v1.5.tar.gz \
     && tar zxvf v1.5.tar.gz \
