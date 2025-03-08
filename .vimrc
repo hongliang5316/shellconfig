@@ -452,3 +452,12 @@ nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 let g:rustfmt_autosave = 1
 let g:racer_cmd = "/root/.cargo/bin/racer"
 let g:gitgutter_max_signs=9999
+let g:ctrlp_custom_ignore='\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|vendor))$'
+let g:solarized_termcolors=256
+let g:solarized_contrast = "high"
+let g:solarized_termtrans = 1
+
+set termguicolors
+
+"set theme solarized dark
+colorscheme solarized8
