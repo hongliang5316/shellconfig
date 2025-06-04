@@ -7,7 +7,7 @@
     ci = commit -avS --signoff
     ck = checkout
     co = clone
-    df = diff --color
+    df = diff
     pl = pull
     ph = push
     br = branch
@@ -15,8 +15,8 @@
     lg = log --stat --color
     sh = show --color
     sa = stash
-    phm = push origin master
-    plm = pull origin master
+    phm = push origin main
+    plm = pull origin main
     rebase = rebase --exec 'git commit --amend --no-edit -n -S'
     cis = commit --amend --no-edit -n -S --signoff
 	d = difftool
@@ -32,3 +32,7 @@
 	required = true
 [difftool]
 	prompt = false
+[safe]
+	directory = *
+[init]
+	defaultBranch = main
